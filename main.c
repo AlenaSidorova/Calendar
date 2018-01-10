@@ -2,15 +2,15 @@
 
 int main()
 {
-  int day, month, year, b, x, n, result;
+  int day, month, year, b, x, n, res;
   
   scanf("%d%d%d", &day, &month, &year);
   b = (14-month)/12;
   x = year - b;
   n = month + 12 * b - 2;
-  result = (7000 + (day + x + x / 4 - x / 100 + x / 400 + (31 * n) / 12)) % 7;
+  res = (7000 + (day + x + x / 4 - x / 100 + x / 400 + (31 * n) / 12)) % 7;
   printf("%d.%d.%d was ", day, month, year);
-  switch (result)
+  switch (res)
 	{
     case 1:
       printf("Monday\n");
